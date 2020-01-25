@@ -11,9 +11,8 @@ public class CodeGenerator {
 		final long startTime = System.nanoTime();
 		List<String> codes = new ArrayList<String>();
 		List<String> duplicates = new ArrayList<String>();
-		codes.add("1");
-		int codesNumbers = 1000;
-		for (int i = 1; i < codesNumbers; i++) {
+		int codesNumbers = 10000;
+		for (int i = 1; i <= codesNumbers; i++) {
 			String code = generateCode();
 			outerloop: for (;;) {
 				if (codes.contains(code)) {
